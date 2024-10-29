@@ -1,0 +1,323 @@
+{
+	"info": {
+		"_postman_id": "577b5905-cc62-43cf-b225-4daf707734b9",
+		"name": "Collection_for_sputnik",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37078584"
+	},
+	"item": [
+		{
+			"name": "Users check",
+			"item": [
+				{
+					"name": "Add user1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "login",
+								"value": "user1",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "12345",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8080/users/store"
+					},
+					"response": []
+				},
+				{
+					"name": "Add user2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/store",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"store"
+							],
+							"query": [
+								{
+									"key": "login",
+									"value": "user2",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add user3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:8080/users/store"
+					},
+					"response": []
+				},
+				{
+					"name": "Add user4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:8080/users/store"
+					},
+					"response": []
+				},
+				{
+					"name": "Show users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/users/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Resting places check",
+			"item": [
+				{
+					"name": "add resting place1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Maldives\",\r\n    \"longitude\": \"4.17521\",\r\n    \"latitude\": \"73.5092\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/restingPlaces/store"
+					},
+					"response": []
+				},
+				{
+					"name": "add resting place2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bali island\",\r\n    \"longitude\": \"88.3411\",\r\n    \"latitude\": \"22.6486\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/restingPlaces/store"
+					},
+					"response": []
+				},
+				{
+					"name": "add resting place3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Pattaya\",\r\n    \"longitude\": \"100.883\",\r\n    \"latitude\": \"12.9333\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/restingPlaces/store"
+					},
+					"response": []
+				},
+				{
+					"name": "add resting place4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Anapa\",\r\n    \"longitude\": \"37.3239\",\r\n    \"latitude\": \"44.8908\"   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/restingPlaces/store"
+					},
+					"response": []
+				},
+				{
+					"name": "add resting place5",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Los-angeles\",\r\n    \"longitude\": \"-118.244\",\r\n    \"latitude\": \"34.0522\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/restingPlaces/store"
+					},
+					"response": []
+				},
+				{
+					"name": "add resting place6",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Dubai\",\r\n    \"longitude\": \"55.1713\",\r\n    \"latitude\": \"25.0657\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/restingPlaces/store"
+					},
+					"response": []
+				},
+				{
+					"name": "get resting places",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/restingPlaces"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Wish list check",
+			"item": [
+				{
+					"name": "add to wishlist1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/1/wish_list/add?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"1",
+								"wish_list",
+								"add"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add to wishlist1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/1/wish_list/add?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"1",
+								"wish_list",
+								"add"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add to wishlist2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/2/wish_list/add?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"2",
+								"wish_list",
+								"add"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get 1 wish list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/users/1/wish_list"
+					},
+					"response": []
+				},
+				{
+					"name": "get 2 wish list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/users/2/wish_list"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
